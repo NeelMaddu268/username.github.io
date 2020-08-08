@@ -1,0 +1,47 @@
+<html lang="en">
+<head> 
+<meta charset="UTF-8">
+<title>Login Project</title>
+<style>
+        body{background:turquoise;text-align:center;}
+        input{height:50px;width:200px;background:yellow;border-color:black;}
+      </style>
+        
+</head> 
+<body> 
+  <form name="myForm" action="/" method="post">
+<br><br>
+        <div id="create">
+      <input type="text" name="A" placeholder="User Name"><br><br>
+      <input type="password" name="B" placeholder="Password"><br><br>
+      <br> 
+        <button onclick="change()">Change</button>
+      <input type="submit" value="Create"> </div>
+        <div id="login">
+      <input type="text" name="Aa" placeholder="User Name"><br><br>
+      <input type="password" name="Ba" placeholder="Password"><br><br>
+        </div>
+<h1 id="show">Create</h1>
+  </form> 
+</body>
+    <script>
+       var show = document.getElementById("show");
+var cre = document.getElementById("create");
+var log = document.getElementById("login");
+            log.style.display="none";
+
+      function change(){
+        if(show.textContent == "Create"){
+    show.textContent = "Login";
+    cre.style.display="none";
+    log.style.display="block";
+            return;
+        }
+        else if(show.textContent == "Login"){
+            show.textContent = "Create";
+            cre.style.display="block";
+            log.style.display="none";
+        }
+    }
+    </script>
+</html>
